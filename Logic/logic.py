@@ -40,4 +40,3 @@ def delete(lista_rezervari, id_rezervare: int):
             result.append(reservation)
 
     return result
-

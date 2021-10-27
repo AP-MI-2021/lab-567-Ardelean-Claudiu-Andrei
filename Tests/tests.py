@@ -1,5 +1,6 @@
 from Domain.rezervare import *
 from Domain.rezervare2 import *
+from Logic.logic import *
 
 
 def get_data():
@@ -11,6 +12,7 @@ def get_data():
         get_new_reservation(5, "r5", "economy", 90, True)
     ]
 
+
 def test_add():
     lista = get_data()
     new_reservation = get_new_reservation(6, "r6", "economy", 40, True)
@@ -19,7 +21,9 @@ def test_add():
     assert len(lista_noua) == len(lista) + 1
     assert new_reservation in lista_noua
 
+
 def tests():
     test_add()
+
 
 tests()
