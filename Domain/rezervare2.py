@@ -1,4 +1,4 @@
-def get_new_reservation(_id: int, _nume: str, _clasa: str, _pret: int, _checkin: bool):
+def get_new_reservation(_id: int, _nume: str, _clasa: str, _pret: float, _checkin: bool):
     return [_id, _nume, _clasa, _pret, _checkin]
 
 

@@ -1,8 +1,8 @@
 from Domain.rezervare import *
-from Domain.rezervare2 import *
+# from Domain.rezervare2 import *
 
 
-def add(lista_rezervari: list, _id: int, _nume: str, _clasa: str, _pret: int, _checkin: bool):
+def create(lista_rezervari: list, _id: int, _nume: str, _clasa: str, _pret: float, _checkin: bool):
     reservation = get_new_reservation(_id, _nume, _clasa, _pret, _checkin)
     return lista_rezervari + [reservation]
 

@@ -1,19 +1,19 @@
-from Domain.rezervare import *
-
-from Domain.rezervare2 import *
-
-from Logic.logic import add, read, update, delete
-
-lista = []
-lista = add(lista, 1, "Ardelean", "economy", 200, True)
-lista = add(lista, 2, "Popescu", "business", 5000, False)
+from UserInterface.interfata import *
+from Tests.tests import *
 
 
-new_reservation = get_new_reservation(1, "Ionescu", "business", 2500, True)
-lista = update(lista, new_reservation)
+def main():
+    lista = []
+    lista = create(lista, 1, 'Ardelean', 'business', 1000, True)
+    lista = create(lista, 2, 'Borbei', 'business', 1050, False)
+    lista = create(lista, 3, 'Reitler', 'economy', 125.50, False)
+    lista = create(lista, 4, 'turoczi', 'economy plus', 500, True)
+    lista = create(lista, 5, 'Gozner', 'business :', 1462.30, True)
+    lista = create(lista, 6, 'Capusan', 'economy', 40.5, False)
+    lista = create(lista, 7, 'Musk', 'economy', 34.99, False)
+    run_ui(lista)
 
-lista = delete(lista, 1)
-rezervare = read(lista, 1)
-print(rezervare)
-rezervare = read(lista, 2)
-print(rezervare)
+
+if __name__ == '__main__':
+    tests()
+    main()

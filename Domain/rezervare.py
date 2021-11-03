@@ -1,4 +1,4 @@
-def get_new_reservation(_id: int, _nume: str, _clasa: str, _pret: int, _checkin: bool):
+def get_new_reservation(_id: int, _nume: str, _clasa: str, _pret: float, _checkin: bool):
     reservation = {
         'id': _id,
         'nume': _nume,
@@ -31,4 +31,4 @@ def get_checkin(reservation):
 
 def get_reservation_string(reservation):
     return f"{reservation['id']}, {reservation['nume']}, {reservation['clasa']}, {reservation['pret']},\
- {reservation['checkin']}"
+{reservation['checkin']}"
