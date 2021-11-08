@@ -1,4 +1,13 @@
-def get_new_reservation(_id: int, _nume: str, _clasa: str, _pret: float, _checkin: bool):
+def get_new_reservation(_id: int, _nume: str, _clasa: str, _pret: float, _checkin: str):
+    """
+    Dictionarul in care se retin datele unei rezervari
+    :param _id: id ul rezervarii, un nr intreg
+    :param _nume: numeele pe care este facuta rezervarea
+    :param _clasa: clasa de zbor
+    :param _pret: pretul rezervarii
+    :param _checkin: checkinul ("da" / "nu")
+    :return: o rezervare
+    """
     reservation = {
         'id': _id,
         'nume': _nume,
