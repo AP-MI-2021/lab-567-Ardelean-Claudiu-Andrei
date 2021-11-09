@@ -29,4 +29,3 @@ def reduce_pret_pentru_chk(lista, procent):
         return result
     except ValueError as ve:
         print('Eroare:', ve)
-

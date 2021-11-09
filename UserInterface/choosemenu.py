@@ -1,5 +1,3 @@
-from Logic.logic import create
-from UserInterface.interfata import run_ui
 from UserInterface.interfata2 import *
 
 
@@ -9,7 +7,7 @@ def alegeti_meniul():
     """
     while True:
         print('1. Meniul 1.')
-        print('2. Meniul 2. (SOON)')
+        print('2. Meniul 2.')
         print('x. Exit.')
         lista = []
         lista = create(lista, 1, 'Ardelean', 'business', 1000, 'da')

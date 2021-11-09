@@ -274,7 +274,7 @@ def handle_undo(list_versions, current_version):
     try:
         if current_version < 1:
             print("Nu se mai poate face undo.")
-            return
+            return list_versions[current_version], current_version
         current_version -= 1
         return list_versions[current_version], current_version
     except ValueError as ve:
@@ -290,9 +290,9 @@ def handle_redo(list_versions, current_version):
     :return: lista actualizata in urma executarii functiei
     """
     try:
-        if current_version == len(list_versions) - 1:
+        if current_version >= len(list_versions) - 1:
             print("Nu se mai poate face redo.")
-            return
+            return list_versions[current_version], current_version
         current_version += 1
         return list_versions[current_version], current_version
     except ValueError as ve:
