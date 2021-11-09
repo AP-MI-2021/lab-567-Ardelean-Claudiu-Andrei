@@ -18,9 +18,11 @@ def meniu():
     print("high class,nume (numele pentru care doriti schimbarea clasei)")
     print("reducere,procentul (un numar)")
     print("iesire")
+    print("ajutor")
 
 
 def command(lista_noua):
+    meniu()
     while True:
         optiune = input("Dati comenzile: ")
         if optiune == "ajutor":
@@ -30,7 +32,6 @@ def command(lista_noua):
             if cuvinte[0] == "iesire":
                 break
             else:
-                print(cuvinte)
                 for rezervare in cuvinte:
                     cuvant = rezervare.split(",")
                     if cuvant[0] == "add":
