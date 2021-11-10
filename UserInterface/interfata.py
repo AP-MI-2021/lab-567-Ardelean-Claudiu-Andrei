@@ -273,7 +273,6 @@ def handle_undo(list_versions, current_version):
     """
     try:
         if current_version < 1:
-            print("Nu se mai poate face undo.")
             return list_versions[current_version], current_version
         current_version -= 1
         return list_versions[current_version], current_version
@@ -291,7 +290,6 @@ def handle_redo(list_versions, current_version):
     """
     try:
         if current_version >= len(list_versions) - 1:
-            print("Nu se mai poate face redo.")
             return list_versions[current_version], current_version
         current_version += 1
         return list_versions[current_version], current_version
@@ -341,8 +339,12 @@ def run_ui(lista):
         elif optiune == '6':
             handle_sum_for_name(lista)
         elif optiune == '7':
+            if current_version < 1:
+                print("Nu se mai poate face undo.")
             lista, current_version = handle_undo(list_versions, current_version)
         elif optiune == '8':
+            if current_version >= len(list_versions) - 1:
+                print("Nu se mai poate face redo.")
             lista, current_version = handle_redo(list_versions, current_version)
         elif optiune == 'a':
             handle_show_all(lista)

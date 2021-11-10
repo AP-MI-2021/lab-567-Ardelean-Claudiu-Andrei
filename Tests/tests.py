@@ -1,4 +1,3 @@
-from Domain.rezervare import *
 # from Domain.rezervare2 import *
 from Logic.logic import create, read, update, delete
 from Logic.sum_for_name import *
@@ -6,7 +5,7 @@ from Logic.maxprice import *
 from Logic.ordonare import *
 from Logic.reducere import *
 from UserInterface.interfata import get_higher_class
-
+from Tests.tetRedoUndo import *
 
 def get_data():
     return [
@@ -127,6 +126,7 @@ def tests():
     test_ordonare_rezervari()
     test_reduce_pret_pentru_chk()
     test_get_higher_class()
+    test_undo_redo()
 
 
 tests()
